@@ -1,2 +1,2 @@
 # Reddit_Clone
-this project the back-end clone of the website Reddit based on Spring Boot Framework.
+this project is the back-end clone of the website Reddit based on Spring Boot Framework.
