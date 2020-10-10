@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.Collection;
 
 @Entity
 @Data
@@ -19,7 +21,7 @@ public class VerificationToken {
     private Long Id;
     private String tocken;
     @OneToMany(fetch = FetchType.LAZY)
-    private User user;
+    private Collection<User> users;
     private Instant expiryDate;
 
 
