@@ -35,7 +35,7 @@ public class MailService {
 
         }
         catch (MailException e){
-        throw  new SpringRedditException("Exception occurred when sending mail to "+ notificationEmail.getRecipent());        }
+        throw  new SpringRedditException("Exception occurred when sending mail to "+ notificationEmail.getRecipent()+" stack " + e);        }
     }
 
 }
