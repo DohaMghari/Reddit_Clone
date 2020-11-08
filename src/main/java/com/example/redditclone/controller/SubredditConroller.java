@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/subreddit")
@@ -28,5 +29,10 @@ public class SubredditConroller {
     public ResponseEntity<List<SubredditDto>> getAllSubreddits(){
       return  ResponseEntity.status(HttpStatus.OK)
     .body(subrreditService.getAll());
+    }
+    @GetMapping("/{id}")
+    public ResponseEntity<SubredditDto> getSubreddit(@PathVariable Long id){
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(subrreditService.getSubreddit(id));
     }
 }
